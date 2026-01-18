@@ -43,6 +43,12 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
 
+      - name: Normalize names for Docker tags
+        shell: bash
+        run: |
+          echo "REPO_LOWER=$(echo '${{ github.event.repository.name }}' | tr '[:upper:]' '[:lower:]')" >> "$GITHUB_ENV"
+          echo "BRANCH_LOWER=$(echo '${{ github.ref_name }}' | tr '[:upper:]' '[:lower:]' | tr '/' '-')" >> "$GITHUB_ENV"
+
       - name: Set up QEMU
         uses: docker/setup-qemu-action@v3
 
@@ -63,6 +69,6 @@ jobs:
           platforms: ${{ inputs.platforms }}
           push: true
           tags: |
-            ${{ secrets.DOCKERHUB_USERNAME }}/${{ github.event.repository.name }}:latest
-            ${{ secrets.DOCKERHUB_USERNAME }}/${{ github.event.repository.name }}:${{ github.ref_name }}
-            ${{ secrets.DOCKERHUB_USERNAME }}/${{ github.event.repository.name }}:${{ github.sha }}
+            ${{ secrets.DOCKERHUB_USERNAME }}/${{ env.REPO_LOWER }}:latest
+            ${{ secrets.DOCKERHUB_USERNAME }}/${{ env.REPO_LOWER }}:${{ env.BRANCH_LOWER }}
+            ${{ secrets.DOCKERHUB_USERNAME }}/${{ env.REPO_LOWER }}:${{ github.sha }}
