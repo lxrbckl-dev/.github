@@ -1,4 +1,4 @@
-`dockerhub-build-push.yml`
+`.github/workflows/dockerhub-build-push.yml`
 ```yml
 name: dockerhub-build-push
 
