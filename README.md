@@ -1,1 +1,16 @@
-# .github
+`.github/.github/workflows/dockerhub-build-push.yml`
+```yml
+name: DockerHub
+
+on:
+  push:
+  workflow_dispatch:
+
+jobs:
+  docker:
+    uses: lxrbckl-dev/.github/.github/workflows/dockerhub-build-push.yml@main
+    secrets: inherit
+    with:
+      caller_event_name: ${{ github.event_name }}
+      caller_commit_message: ${{ github.event.head_commit.message }}
+```
