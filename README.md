@@ -1,6 +1,6 @@
-`.github/.github/workflows/dockerhub-build-push.yml`
+`dockerhub-build-push.yml`
 ```yml
-name: DockerHub
+name: dockerhub-build-push
 
 on:
   push:
