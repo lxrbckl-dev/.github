@@ -69,6 +69,5 @@ jobs:
           platforms: ${{ inputs.platforms }}
           push: true
           tags: |
-            ${{ secrets.DOCKERHUB_USERNAME }}/${{ env.REPO_LOWER }}:latest
             ${{ secrets.DOCKERHUB_USERNAME }}/${{ env.REPO_LOWER }}:${{ env.BRANCH_LOWER }}
             ${{ secrets.DOCKERHUB_USERNAME }}/${{ env.REPO_LOWER }}:${{ github.sha }}
