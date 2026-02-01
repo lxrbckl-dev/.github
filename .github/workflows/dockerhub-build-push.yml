@@ -36,7 +36,12 @@ concurrency:
 
 jobs:
   build:
-    if: ${{ inputs.caller_commit_message == 'publish' }}
+    # Trigger on: 1) exact "publish" commit message, or 2) merge commits containing "publish"
+    if: >-
+      ${{
+        inputs.caller_commit_message == 'publish' ||
+        (startsWith(inputs.caller_commit_message, 'Merge ') && contains(inputs.caller_commit_message, 'publish'))
+      }}
 
     runs-on: ubuntu-latest
     steps:
