@@ -1,5 +1,8 @@
 ## Hi there 👋
 
+### Kanban Board
+[Project Board](https://github.com/orgs/lxrbckl-dev/projects/1)
+
 <!--
 
 **Here are some ideas to get you started:**
