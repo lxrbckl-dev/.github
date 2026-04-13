@@ -1,82 +1,77 @@
 # lxrbckl-dev
 
-Personal development organization spanning 2019--2026, housing ~27 projects across automation, self-hosted tools, hardware integrations, and experimental research. Most work follows an iterative development style, with many projects versioned through multiple major releases (V2--V8).
+Personal development organization spanning 2019 to 2026. A collection of projects across automation, self-hosted infrastructure, hardware integration, and applied research. Many projects have evolved through multiple major releases, reflecting an iterative approach to building software that solves real problems.
 
----
-
-## Project Categories
+## Projects
 
 ### DevOps & Automation
 
 | Project | Description |
 |---------|-------------|
-| **Project-Sardaukar** | Autonomous DevOps agent platform -- TPM orchestrator with SWE/QA subagents for issue triage, PR management, and vulnerability remediation |
-| **Project-SelfStack** | Tech stack scanner and analyzer |
-| **Project-Kinma** | Automated GitHub backup utility |
-| **Project-FlyingGitman** | GitHub networking and discovery tool |
-| **.github** | Shared CI/CD workflows and org profile |
+| [Project-Sardaukar](https://github.com/lxrbckl-dev/Project-Sardaukar) | Autonomous multi-agent DevOps platform for managing GitHub organizations from your phone |
+| [Project-SelfStack](https://github.com/lxrbckl-dev/Project-SelfStack) | Daily repository scanning to extract and catalog technology stack information |
+| [Project-Kinma](https://github.com/lxrbckl-dev/Project-Kinma) | Scheduled backups of all GitHub repositories to a local directory |
+| [Project-FlyingGitman](https://github.com/lxrbckl-dev/Project-FlyingGitman) | GitHub network growth and discovery automation |
 
 ### Web & Portfolios
 
 | Project | Description |
 |---------|-------------|
-| **Project-Fenaverat** | Personal portfolio site |
-| **portfolio** | Portfolio site (forked) |
-| **reactive-resume** | Resume builder (forked) |
+| [Project-Fenaverat](https://github.com/lxrbckl-dev/Project-Fenaverat) | Portfolio site showcasing projects, servers, and personal details |
+| [Project-GreenThumb](https://github.com/lxrbckl-dev/Project-GreenThumb) | AI-powered personal finance tracker with receipt parsing and savings intelligence |
+| [portfolio](https://github.com/lxrbckl-dev/portfolio) | Containerized portfolio site with CI/CD pipelines |
+| [reactive-resume](https://github.com/lxrbckl-dev/reactive-resume) | Self-hosted resume builder |
 
-### Discord Bots & Tools
-
-| Project | Description |
-|---------|-------------|
-| **Project-PasCam** | Secure password sharing via Discord |
-| **Project-JA** | Conversation prompt generator |
-| **Project-RCoD** | Return call notifications |
-| **Project-UMKC** | Zoom meeting alerts |
-| **Project-WS3K** | Typing activity alerts |
-
-### Server & Infrastructure
+### Discord Bots & Integrations
 
 | Project | Description |
 |---------|-------------|
-| **Project-Domum** | GPIO-controlled power outlets on Raspberry Pi |
-| **Project-Maximus** | USB camera management on Raspberry Pi |
-| **Project-Acta-Mea** | Docker CRUD operations (discontinued) |
+| [Project-PasCam](https://github.com/lxrbckl-dev/Project-PasCam) | Encrypted password sharing via Discord |
+| [Project-JA](https://github.com/lxrbckl-dev/Project-JA) | Mystical conch shell, weekly conversation prompts, and decision delegation |
+| [Project-RCoD](https://github.com/lxrbckl-dev/Project-RCoD) | Return call notifications on Discord |
+| [Project-UMKC](https://github.com/lxrbckl-dev/Project-UMKC) | Zoom class start notifications on Discord |
+| [Project-WS3K](https://github.com/lxrbckl-dev/Project-WS3K) | Typing activity alerts for Discord channels |
 
-### Roulette & Visual Ballistics Research
-
-A multi-year research arc (2019--2022) exploring data modeling and visual ballistics analysis.
-
-| Project | Description |
-|---------|-------------|
-| **Project-VBR** | Core visual ballistics research platform |
-| **Project-Panavia** | Data collection and analysis |
-| **Project-OGIWS** | Observation and game-state inference |
-| **Project-TeneT** | Temporal pattern analysis |
-| **Project-Borg** | Aggregation and modeling framework |
-
-### AI, Security & Misc
+### Hardware & Infrastructure
 
 | Project | Description |
 |---------|-------------|
-| **Project-ASBC** | AI-powered Blink camera monitoring |
-| **Project-AuTester** | Digital human emulation for testing |
-| **Project-MadGarden** | Tech stack visualization |
-| **Project-SafeTrack** | Railroad safety data analysis |
-| **Project-ACLG** | Cover letter generator (discontinued) |
-| **Project-Comperio** | Social network analysis (discontinued) |
+| [Project-Maximus](https://github.com/lxrbckl-dev/Project-Maximus) | Multi-camera USB capture and relay control on Raspberry Pi |
+| [Project-Domum](https://github.com/lxrbckl-dev/Project-Domum) | GPIO-controlled power outlet management on Raspberry Pi |
+| [Project-ASBC](https://github.com/lxrbckl-dev/Project-ASBC) | AI-powered monitoring and object detection for Blink camera footage |
 
----
+### Applied Research
 
-## Key Themes
+A multi-year research arc exploring data modeling and visual ballistics analysis across five interconnected repositories.
 
-- **Automation-first** -- from DevOps pipelines to Discord bots, the default approach is to automate repetitive work.
-- **Self-hosted tools** -- preference for owning the stack rather than depending on third-party services.
-- **Hardware integration** -- Raspberry Pi projects for physical computing (GPIO outlets, USB cameras).
-- **Iterative development** -- many projects span multiple major versions, refined over years.
-- **Research-driven** -- the visual ballistics arc demonstrates sustained, methodical investigation across five interconnected repositories.
+| Project | Description |
+|---------|-------------|
+| [Project-VBR](https://github.com/lxrbckl-dev/Project-VBR) | Conceptual modeling for visual ballistics data |
+| [Project-Panavia](https://github.com/lxrbckl-dev/Project-Panavia) | Framework development for visual ballistics analysis |
+| [Project-OGIWS](https://github.com/lxrbckl-dev/Project-OGIWS) | Offset graphing by individual wheel speed |
+| [Project-TeneT](https://github.com/lxrbckl-dev/Project-TeneT) | Reverse Monte Carlo simulation with RRS systems |
+| [Project-Borg](https://github.com/lxrbckl-dev/Project-Borg) | Biased wheel data conceptualization |
 
----
+### Other
 
-## Kanban Board
+| Project | Description |
+|---------|-------------|
+| [Project-SafeTrack](https://github.com/lxrbckl-dev/Project-SafeTrack) | Incident investigation and corrective action system for railroad safety |
+| [Project-AuTester](https://github.com/lxrbckl-dev/Project-AuTester) | Scripts to emulate digital human interactivity |
+| [Project-MadGarden](https://github.com/lxrbckl-dev/Project-MadGarden) | Autonomous tech stack network visualization from repository analysis |
 
-[Project Board](https://github.com/orgs/lxrbckl-dev/projects/1) -- tracks active work across the organization.
+## Themes
+
+**Automation-first.** From DevOps pipelines to Discord bots, the default approach is to automate repetitive work.
+
+**Self-hosted.** Preference for owning the stack rather than depending on third-party services.
+
+**Hardware integration.** Raspberry Pi projects for physical computing, camera systems, and relay control.
+
+**Iterative development.** Many projects span multiple major versions, refined over years.
+
+**Research-driven.** The visual ballistics arc demonstrates sustained, methodical investigation across five interconnected repositories.
+
+## Board
+
+[Kanban Board](https://github.com/orgs/lxrbckl-dev/projects/1) · Tracks active work across the organization.
