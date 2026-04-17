@@ -4,15 +4,13 @@ Personal development organization spanning 2019 to 2026. A collection of project
 
 ## Themes
 
-**Automation-first.** From DevOps pipelines to Discord bots, the default approach is to automate repetitive work.
-
-**Self-hosted.** Preference for owning the stack rather than depending on third-party services.
-
-**Hardware integration.** Raspberry Pi projects for physical computing, camera systems, and relay control.
-
-**Iterative development.** Many projects span multiple major versions, refined over years.
-
-**Research-driven.** The visual ballistics arc demonstrates sustained, methodical investigation across five interconnected repositories.
+| Theme | Description |
+|-------|-------------|
+| Automation-first | From DevOps pipelines to Discord bots, the default approach is to automate repetitive work. |
+| Self-hosted | Preference for owning the stack rather than depending on third-party services. |
+| Hardware integration | Raspberry Pi projects for physical computing, camera systems, and relay control. |
+| Iterative development | Many projects span multiple major versions, refined over years. |
+| Research-driven | The visual ballistics arc demonstrates sustained, methodical investigation across five interconnected repositories. |
 
 ## Board
 
