@@ -41,7 +41,15 @@ on:
         required: true
 
 concurrency:
-  group: ${{ github.workflow }}-${{ github.ref }}
+  # Per-image group key. Monorepo callers invoke this reusable workflow
+  # N times in one push (one per image_name); without `image_name` in the
+  # group key, all N would land in the same group and `cancel-in-progress`
+  # would cancel all but the last to start — only one image would publish.
+  # Single-image callers don't pass `image_name`, so their group key is
+  # `<workflow>-<ref>-` (trailing dash), which is still stable per
+  # (workflow, ref) and preserves the original cancel-the-older-build
+  # behavior on rapid successive pushes.
+  group: ${{ github.workflow }}-${{ github.ref }}-${{ inputs.image_name }}
   cancel-in-progress: true
 
 jobs:
