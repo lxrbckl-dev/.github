@@ -23,6 +23,16 @@ on:
         required: false
         type: string
         default: ""
+      image_name:
+        required: false
+        type: string
+        default: ""
+        description: |
+          Override the image name segment after the DockerHub username.
+          Empty (default) → use the GitHub repo name (existing behavior).
+          Set for monorepos that publish multiple images per repo, e.g.
+          "lucidindex-web" → tags become <user>/lucidindex-web:<tag>.
+          Always lowercased.
 
     secrets:
       DOCKERHUB_USERNAME:
@@ -51,7 +61,13 @@ jobs:
       - name: Normalize names for Docker tags
         shell: bash
         run: |
-          echo "REPO_LOWER=$(echo '${{ github.event.repository.name }}' | tr '[:upper:]' '[:lower:]')" >> "$GITHUB_ENV"
+          # IMAGE_NAME: caller's override if non-empty, otherwise the repo name.
+          # Always lowercased — DockerHub repo names are lowercase-only.
+          RAW_IMAGE_NAME="${{ inputs.image_name }}"
+          if [ -z "$RAW_IMAGE_NAME" ]; then
+            RAW_IMAGE_NAME="${{ github.event.repository.name }}"
+          fi
+          echo "IMAGE_NAME=$(echo "$RAW_IMAGE_NAME" | tr '[:upper:]' '[:lower:]')" >> "$GITHUB_ENV"
           echo "BRANCH_LOWER=$(echo '${{ github.ref_name }}' | tr '[:upper:]' '[:lower:]' | tr '/' '-')" >> "$GITHUB_ENV"
 
       - name: Set up QEMU
@@ -74,5 +90,5 @@ jobs:
           platforms: ${{ inputs.platforms }}
           push: true
           tags: |
-            ${{ secrets.DOCKERHUB_USERNAME }}/${{ env.REPO_LOWER }}:${{ env.BRANCH_LOWER }}
-            ${{ secrets.DOCKERHUB_USERNAME }}/${{ env.REPO_LOWER }}:${{ github.sha }}
+            ${{ secrets.DOCKERHUB_USERNAME }}/${{ env.IMAGE_NAME }}:${{ env.BRANCH_LOWER }}
+            ${{ secrets.DOCKERHUB_USERNAME }}/${{ env.IMAGE_NAME }}:${{ github.sha }}
